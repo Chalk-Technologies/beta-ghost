@@ -84,6 +84,11 @@ If Node isn't installed, follow the [official Node installation guide](https://n
 
 ### Start development mode
 
+You must use node version 22, nvm can be helpful:
+```bash
+nvm use v22.23.1
+```
+
 From the Starter theme folder, start development mode:
 
 ```bash

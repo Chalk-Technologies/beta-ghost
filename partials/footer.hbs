@@ -1,0 +1,32 @@
+
+<footer class="gh-foot">
+    <div class="gh-container">
+      <a href="{{@site.url}}" class="g-footer-title" style="background-image: url(https://storage.googleapis.com/beta-assets/FullLogoWHITEfooter.png);" >
+          {{@site.title}}
+      </a>
+
+        <div class="gh-foot-menu">
+            {{navigation}}
+        </div>
+        <div class="gh-foot-menu">
+            {{navigation type="secondary"}}
+        </div>
+
+      <button class="g-footer-button" aria-label="{{t "Open search"}}" data-ghost-search >
+        {{> "icons/search"}}
+      </button>
+
+    </div>
+
+      {{!-- Newsletter form --}}
+      {{> beta-newsletter-form}}
+      <p class="g-footer-copyright">
+
+      </p>
+
+    {{> social-links}}
+
+        <div class="gh-foot-meta">
+            <span> 🇪🇺 Made in Europe by {{@site.title}} &copy; {{date format="YYYY"}}</span>
+        </div>
+</footer>

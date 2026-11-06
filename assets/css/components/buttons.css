@@ -58,7 +58,7 @@
 }
 
 .gh-button.gh-button-primary {
-    color: #fff !important;
+    color: var(--color-bg) !important;
     background-color: var(--color-primary);
     box-shadow: none;
 }

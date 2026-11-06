@@ -44,6 +44,12 @@
     margin-top: 4vmin;
 }
 
+/*.kg-button-card {*/
+/*    margin-top: 4vmin;*/
+/*}*/
+/*.kg-toggle-card {*/
+/*    margin-top: 4vmin;*/
+/*}*/
 .gh-content [id]:not(:first-child) {
     margin: 1.5em 0 0;
 }
@@ -66,6 +72,8 @@
     font-weight: 400;
     font-size: 2rem;
     line-height: 1.6em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .gh-content > ul,
@@ -123,6 +131,10 @@
     margin-top: 6vmin;
 }
 
+.gh-content > .kg-header-card + .kg-header-card {
+    margin-top: 0;
+}
+
 figcaption {
     padding: 1.5rem 1.5rem 0;
     text-align: center;
@@ -172,6 +184,7 @@ figcaption strong {
 
 .kg-image-card img {
     margin: auto;
+    border-radius: 2rem;
 }
 
 
@@ -231,4 +244,13 @@ figcaption strong {
 
 .gh-content tbody tr:last-child {
     border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+
+
+/* Custom styles
+/* ---------------------------------------------------------- */
+
+.kg-header-card-content.div {
+    text-align: left;
 }

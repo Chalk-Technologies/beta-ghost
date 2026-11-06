@@ -1,0 +1,21 @@
+{{!--
+  This template renders feature lists linking to other posts matching the given tag.
+  The variable feature-tag must be passed in
+--}}
+{{#get
+"posts"
+limit="100"
+filter="tags:features"
+include="tags"
+as |feature-posts|
+}}
+{{#if feature-posts}}
+  <section class="hideme">
+      {{#foreach feature-posts}}
+          <div class="g-linked-features__item{{#foreach tags}} {{name}}{{/foreach}}">
+          {{> card}}
+        </div>
+      {{/foreach}}
+  </section>
+{{/if}}
+{{/get}}

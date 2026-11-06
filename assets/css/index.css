@@ -13,6 +13,9 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import "components/global.css";
 @import "components/forms.css";
 @import "components/buttons.css";
+@import "components/pricing.css";
+@import "components/feature-card.css";
+@import "components/sliding-gallery.css";
 
 /* Ghost components */
 @import "ghost/header.css";
@@ -48,13 +51,11 @@ html,
     padding: 0 4vmin;
 }
 
-.gh-article {
-    padding: 8vmin 0;
-}
+.gh-article {}
 
 .gh-postfeed {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 4.8vmin 4vmin;
     padding: 8vmin 0;
 }
@@ -95,23 +96,37 @@ html,
 /* .gh-card:not(:first-child) {
     margin: 8vmin auto 0;
 } */
-
+.gh-card {
+    border-bottom: 1px solid var(--color-base);
+    padding: 1vmin 0 4vmin 0;
+}
 .gh-card-link {
     display: flex;
-    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
 }
 
-.gh-card-image {
-    width: 100%;
-    /* max-height: 700px; */
-    object-fit: cover;
-    margin-bottom: 4vmin;
-    aspect-ratio: 1 / 1;
-}
-
-.gh-card-image:first-of-type {
+.gh-card-picture {
+    width: 200px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    /*background: var(--color-base);*/
     aspect-ratio: 16 / 9;
 }
+
+@media (max-width: 800px) {
+    .gh-card-picture {
+        /*width: 100px;*/
+    }
+
+}
+.gh-card-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 
 
 .gh-card-meta {
@@ -126,16 +141,22 @@ html,
 
 .gh-card-content {
     max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
     font-size: 1.6rem;
+    padding: 2vmin 0;
 }
 
 .gh-card-content p {
     margin: 1.2rem 0;
-    padding: 0 3vmin;
+    padding: 0;
 }
 
+.gh-card-title {
+    font-size: 2rem;
+}
+
+/*unused*/
 .gh-card-content > strong {
     display: inline-block;
     padding: 1px 0;
@@ -150,7 +171,7 @@ html,
 
 .gh-page-head {
     margin: 0 auto;
-    padding: 8vmin 0 4vmin;
+    padding: 120px 0 8vmin 0;
     text-align: center;
 }
 
@@ -178,8 +199,13 @@ html,
 /* ---------------------------------------------------------- */
 
 .gh-header {
-    padding: 0 0 8vmin 0;
+    padding: 200px 0 12vmin 0;
     text-align: center;
+    /*background: url(https://storage.ghost.io/c/0d/b6/0db6fa8e-7b3e-4e8a-9cc5-7a9011a9def4/content/images/2023/08/betagradientflow.png);*/
+    background-size: cover;
+    background-position: center;
+    color: var(--color-bg);
+    background-color: var(--color-base);
 }
 
 .gh-post-meta {
@@ -255,4 +281,35 @@ html,
     .gh-author-meta {
         font-size: 1.6rem;
     }
+}
+
+
+/*Custom*/
+
+
+.kg-layout-split .kg-header-card-text.kg-align-center {
+    text-align: left;
+}
+
+.kg-swapped .kg-header-card-text.kg-align-center {
+    text-align: right;
+}
+
+.kg-header-card-button {
+    border-radius: 23px !important;
+}
+
+.kg-btn {
+    border-radius: 18px !important;
+}
+
+@media (max-width: 900px) {
+    .kg-layout-split .kg-header-card-text.kg-align-center {
+        text-align: center;
+    }
+
+    .kg-swapped .kg-header-card-text.kg-align-center {
+        text-align: center;
+    }
+
 }

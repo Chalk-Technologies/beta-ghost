@@ -1,0 +1,4 @@
+routes:
+    /:
+        template: home
+        data: page.home

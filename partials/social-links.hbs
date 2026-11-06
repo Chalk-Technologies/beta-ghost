@@ -1,0 +1,37 @@
+
+{{!--
+  This template renders the social links profiles + RSS feed.
+--}}
+<div class="g-footer__social" aria-label="{{t "Social links in footer"}}">
+    <a href="https://www.instagram.com/getbeta_/" target="_blank" rel="noopener" >
+        {{> "icons/instagram"}}
+    </a>
+    <a href="https://www.linkedin.com/company/sendmoregetbeta" target="_blank" rel="noopener" >
+        {{> "icons/linkedin"}}
+    </a>
+  {{#if @site.twitter}}
+    <a
+      href="{{twitter_url @site.twitter}}"
+      target="_blank"
+      rel="noopener"
+    >
+        {{> "icons/twitter"}}
+    </a>
+  {{/if}}
+  {{#if @site.facebook}}
+      <a
+        href="{{facebook_url @site.facebook}}"
+        target="_blank"
+        rel="noopener"
+      >
+        {{> "icons/facebook"}}
+      </a>
+  {{/if}}
+    <a
+      href="{{@site.url}}/rss"
+      target="_blank"
+      rel="noopener"
+    >
+        {{> "icons/rss"}}
+    </a>
+</div>

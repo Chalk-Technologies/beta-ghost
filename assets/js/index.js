@@ -6,7 +6,8 @@ import "../css/index.css";
 // Import JS
 import menuOpen from "./menuOpen";
 import infiniteScroll from "./infiniteScroll";
-
+import "./post.js";
+import "./gallery.js";
 
 // Call the menu and infinite scroll functions
 menuOpen();

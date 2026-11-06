@@ -1,0 +1,22 @@
+
+
+
+{{#if @site.members_enabled}}
+  {{^if @member}}
+        <form class="gh-auth-form" data-members-form="subscribe">
+            <h2 class="gh-auth-title">Subscribe</h1>
+            <p>Subscribe to our newsletter for the latest news and features straight to your inbox.</p>
+            <div class="gh-auth-box">
+                <input aria-label="Email Address" class="gh-input" data-members-email type="email"
+                    placeholder="youremail@example.com" required="true" autocomplete="false" />
+                <button class="gh-button gh-button-primary" type="submit">
+                    <span class="gh-button-content">→</span>
+                    <span class="gh-button-loader">{{> "icons/loader"}}</span>
+                </button>
+            </div>
+            <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to confirm your
+                subscription</div>
+            <div class="message-error">Please enter a valid email address!</div>
+        </form>
+  {{/if}}
+{{/if}}

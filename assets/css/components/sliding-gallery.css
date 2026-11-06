@@ -1,0 +1,48 @@
+
+
+.kg-gallery-card:has(.sliding-gallery-container) {
+    width: 100%;
+}
+
+.sliding-gallery-container {
+    overflow: hidden;
+    width: 100%;
+    /* soft fade at the left/right edges */
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.sliding-gallery-group {
+    display: flex;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+/* Pause while hovering (remove this rule for non-stop motion) */
+/*.sliding-gallery-container:hover .track { animation-play-state: paused; }*/
+
+/* Both groups have the same width, including the gap at the seam. */
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.sliding-gallery-container img {
+    border-radius: 12px;
+    max-height: 200px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .track { animation: none; }
+    .sliding-gallery-copy { display: none; }
+    .sliding-gallery-container { overflow-x: auto; }
+}

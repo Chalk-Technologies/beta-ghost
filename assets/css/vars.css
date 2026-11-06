@@ -2,18 +2,23 @@
 /* ---------------------------------------------------------- */
 
 :root {
+    /*Brand colors*/
+    --color-orange: #f90;
+    --color-red: #ff5600;
+    --color-blue: #2054e0;
 
     /* Colours */
-    --color-primary: var(--ghost-accent-color, #3eb0ef);
-    --color-base: #131313;
-    --color-border: #ddd;
-    --color-bg: #f5f5f5;
-    --color-success: #80b912;
-    --color-error: #f05230;
+    --color-base: #121212;
+    --color-border: #f5f5f6;
+    --color-bg: #F8FAFE;
+    --color-success: #30d9ac;
+    --color-error: #E84E0F;
+    --color-primary: var(--color-blue, #3eb0ef);
 
     /* Fonts */
-    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --font-serif: Georgia, Times, serif;
+    --font-sans-serif: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-serif: Montserrat, Georgia, Times, serif;
+    --font-heading: Russo One, Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
     --font-light: 100;
     --font-normal: 400;
@@ -30,6 +35,6 @@
     /* Sizes */
     --height: 4rem;
     --margin: 2rem;
-    --radius: 0.5rem;
+    --radius: 3rem;
 
 }

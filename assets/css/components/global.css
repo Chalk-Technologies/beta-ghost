@@ -22,7 +22,7 @@ body {
     line-height: 1.6em;
     font-weight: 400;
     font-style: normal;
-    background: #fff;
+    background: var(--color-bg);
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -146,6 +146,14 @@ h6 {
     font-weight: 700;
 }
 
+h1,
+h2 {
+    margin: 0;
+    line-height: 1.15em;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
 h1 {
     font-size: 4.6rem;
     letter-spacing: -0.5px;
@@ -157,11 +165,11 @@ h1 {
 }
 
 h2 {
-    font-size: 3.6rem;
+    font-size: 4.6rem !important;
 }
 @media (max-width: 500px) {
     h2 {
-        font-size: 2.2rem;
+        font-size: 2.2rem !important;
     }
 }
 

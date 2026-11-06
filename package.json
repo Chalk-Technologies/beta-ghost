@@ -1,6 +1,6 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A starter theme for Ghost theme development",
+    "name": "beta-ghost",
+    "description": "BETA design",
     "demo": "https://starter.ghost.io",
     "version": "1.0.0",
     "engines": {

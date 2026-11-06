@@ -1,0 +1,49 @@
+/* section that wraps the whole thing*/
+.g-feature-posts {
+}
+/*kg-card kg-width-full kg-header-card g-feature-posts__wrapper inside of it*/
+/*g-feature-posts__container inside of that*/
+/*g-feature-posts__content inside of THAT*/
+
+/*a series of gh-card post tag-checkin tag-features tag-hash-import-2026-07-16-16-44*/
+/*with gh-card-link inside*/
+/*having gh-card-picture and gh-card-content (2 elements ) */
+.g-feature-posts__wrapper {
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+
+.g-feature-posts__container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.g-feature-posts__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 16px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+
+.g-feature-posts__wrapper .gh-card {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+}
+
+/*// force image to be square*/
+
+.g-feature-posts__wrapper .gh-card picture {
+    height: 200px;
+}
+
+/*// the original div that gets hidden after we move stuff out of it*/
+.hideme {
+    display: none;
+}
+
